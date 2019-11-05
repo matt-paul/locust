@@ -4,11 +4,6 @@ provider "google" {
   region      = "europe-west2"
 }
 
-resource "google_project_service" "kubernetes" {
-  project = "locust-load-testing-123"
-  service = "container.googleapis.com"
-}
-
 resource "google_container_cluster" "primary" {
   name     = "locust-cluster"
   location = "europe-west2"
